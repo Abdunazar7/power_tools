@@ -1,0 +1,1104 @@
+{
+	"info": {
+		"_postman_id": "9ce2ed6c-cf46-4710-bbe6-45a40b5364a0",
+		"name": "power_tools",
+		"description": "Power Tools rental system API collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46840672"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "register user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Ali\",\n  \"phone_number\": \"+998901112233\",\n  \"email\": \"ali@example.com\",\n  \"password\": \"123456\",\n  \"is_active\": true,\n  \"role\": \"client\",\n  \"address\": \"Toshkent, Chilonzor\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/users/register",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"bekzod@example.com\",\n  \"password\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/users/login",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get users",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/users",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get one user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/users/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFsaSIsInJvbGUiOiJjbGllbnQiLCJpYXQiOjE3NTYwNjExMzcsImV4cCI6MTc1NjA2NDczN30.BNNego4ayqnvxTl11Wi2jZosxAzVAkx3nTVZi9cLXEk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"address\": \"Yangiobod, Tashkent\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/users/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete user",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/users/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "admins",
+			"item": [
+				{
+					"name": "create admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwibmFtZSI6IkJla3pvZCIsInJvbGUiOiJvd25lciIsImlhdCI6MTc1NjA2MTI0NywiZXhwIjoxNzU2MDY0ODQ3fQ.vexL5_QS49xPHsh594y_06fiZ-qEFguuZ8vYkFI5cI4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"full_name\": \"Admin Three\",\n  \"email\": \"admin2@example.com\",\n  \"password\": \"secret123\",\n  \"phone_number\": \"+998909999977\",\n  \"is_active\": true,\n  \"is_creator\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/admins",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"admins"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get admins",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwibmFtZSI6IkJla3pvZCIsInJvbGUiOiJvd25lciIsImlhdCI6MTc1NjA2MTI0NywiZXhwIjoxNzU2MDY0ODQ3fQ.vexL5_QS49xPHsh594y_06fiZ-qEFguuZ8vYkFI5cI4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/admins",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"admins"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get one admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwibmFtZSI6IkJla3pvZCIsInJvbGUiOiJvd25lciIsImlhdCI6MTc1NjA2MTI0NywiZXhwIjoxNzU2MDY0ODQ3fQ.vexL5_QS49xPHsh594y_06fiZ-qEFguuZ8vYkFI5cI4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/admins/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"admins",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwibmFtZSI6IkJla3pvZCIsInJvbGUiOiJvd25lciIsImlhdCI6MTc1NjA2MTI0NywiZXhwIjoxNzU2MDY0ODQ3fQ.vexL5_QS49xPHsh594y_06fiZ-qEFguuZ8vYkFI5cI4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"phone_number\": \"+998907777777\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/admins/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"admins",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwibmFtZSI6IkJla3pvZCIsInJvbGUiOiJvd25lciIsImlhdCI6MTc1NjA2MTI0NywiZXhwIjoxNzU2MDY0ODQ3fQ.vexL5_QS49xPHsh594y_06fiZ-qEFguuZ8vYkFI5cI4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/admins/3",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"admins",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tools",
+			"item": [
+				{
+					"name": "create tool",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwibmFtZSI6IkJla3pvZCIsInJvbGUiOiJvd25lciIsImlhdCI6MTc1NjA2MTI0NywiZXhwIjoxNzU2MDY0ODQ3fQ.vexL5_QS49xPHsh594y_06fiZ-qEFguuZ8vYkFI5cI4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Rotary Hammer\",\n  \"brand\": \"Bosch\",\n  \"description\": \"Construction Hammer\",\n  \"tool_price\": 80.00\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/tools",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"tools"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get tools",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/tools",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"tools"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get one tool",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/tools/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"tools",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update tool",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"tool_price\": 180.00\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/tools/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"tools",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete tool",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/tools/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"tools",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "districts",
+			"item": [
+				{
+					"name": "create district",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwibmFtZSI6IkJla3pvZCIsInJvbGUiOiJvd25lciIsImlhdCI6MTc1NjA2MTI0NywiZXhwIjoxNzU2MDY0ODQ3fQ.vexL5_QS49xPHsh594y_06fiZ-qEFguuZ8vYkFI5cI4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Yakkasaroy\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/districts",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"districts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get districts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/districts",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"districts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get one district",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/districts/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"districts",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update district",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwibmFtZSI6IkJla3pvZCIsInJvbGUiOiJvd25lciIsImlhdCI6MTc1NjA2MTI0NywiZXhwIjoxNzU2MDY0ODQ3fQ.vexL5_QS49xPHsh594y_06fiZ-qEFguuZ8vYkFI5cI4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Yunusobod\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/districts/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"districts",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete district",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/districts/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"districts",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "shops",
+			"item": [
+				{
+					"name": "create shop",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwibmFtZSI6IkJla3pvZCIsInJvbGUiOiJvd25lciIsImlhdCI6MTc1NjA2MTI0NywiZXhwIjoxNzU2MDY0ODQ3fQ.vexL5_QS49xPHsh594y_06fiZ-qEFguuZ8vYkFI5cI4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"RentPro Tashkent\",\n  \"owner_id\": 6,\n  \"phone_number\": \"+998933334455\",\n  \"district_id\": 2,\n  \"address\": \"Sergeli, Tashkent\",\n  \"location\": \"41.3112, 69.2799\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/shops",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"shops"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get shops",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/shops",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"shops"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get one shop",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/shops/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"shops",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update shop",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwibmFtZSI6IkJla3pvZCIsInJvbGUiOiJvd25lciIsImlhdCI6MTc1NjA2MTI0NywiZXhwIjoxNzU2MDY0ODQ3fQ.vexL5_QS49xPHsh594y_06fiZ-qEFguuZ8vYkFI5cI4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"owner_id\": 5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/shops/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"shops",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete shop",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/shops/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"shops",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "shop_tools",
+			"item": [
+				{
+					"name": "create shop_tool",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwibmFtZSI6IkJla3pvZCIsInJvbGUiOiJvd25lciIsImlhdCI6MTc1NjA2MTI0NywiZXhwIjoxNzU2MDY0ODQ3fQ.vexL5_QS49xPHsh594y_06fiZ-qEFguuZ8vYkFI5cI4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"shop_id\": 2,\n  \"tool_id\": 2,\n  \"rent_price\": 20.00\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/shop-tools",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"shop-tools"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get shop_tools",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/shop-tools",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"shop-tools"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get one shop_tool",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/shop-tools/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"shop-tools",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update shop_tool",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwibmFtZSI6IkJla3pvZCIsInJvbGUiOiJvd25lciIsImlhdCI6MTc1NjA2MTI0NywiZXhwIjoxNzU2MDY0ODQ3fQ.vexL5_QS49xPHsh594y_06fiZ-qEFguuZ8vYkFI5cI4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"rent_price\": 25.00\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/shop-tools/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"shop-tools",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete shop_tool",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/shop-tools/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"shop-tools",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "orders",
+			"item": [
+				{
+					"name": "create order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwibmFtZSI6IkJla3pvZCIsInJvbGUiOiJvd25lciIsImlhdCI6MTc1NjA2MTI0NywiZXhwIjoxNzU2MDY0ODQ3fQ.vexL5_QS49xPHsh594y_06fiZ-qEFguuZ8vYkFI5cI4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"client_id\": 2,\n  \"shop_tool_id\": 2,\n  \"order_date\": \"2025-08-24\",\n  \"period\": 5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/orders",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get orders",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwibmFtZSI6IkJla3pvZCIsInJvbGUiOiJvd25lciIsImlhdCI6MTc1NjA2MTI0NywiZXhwIjoxNzU2MDY0ODQ3fQ.vexL5_QS49xPHsh594y_06fiZ-qEFguuZ8vYkFI5cI4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/orders",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get one order",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/orders/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"orders",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update order",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"period\": 10\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/orders/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"orders",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete order",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/orders/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"orders",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "otp",
+			"item": [
+				{
+					"name": "send otp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"abdunazaribrohimov7@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/otp/send-otp",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"otp",
+								"send-otp"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "verify otp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"abdunazaribrohimov7@gmail.com\",\r\n    \"otp\": \"513064\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api/otp/verify-otp",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"otp",
+						"verify-otp"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "http://localhost:3000",
+			"type": "default"
+		}
+	]
+}
