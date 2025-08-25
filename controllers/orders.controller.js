@@ -42,7 +42,7 @@ const createOrder = (req, res) => {
 };
 
 // Get All
-const getOrders = (_, res) => {
+const getOrders = (req, res) => {
   const sql = `SELECT o.*, u.name as client_name, t.name as tool_name, s.name as shop_name
                FROM orders o
                LEFT JOIN user u ON o.client_id = u.id

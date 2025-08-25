@@ -10,7 +10,7 @@ const createDistrict = (req, res) => {
 };
 
 // Get All
-const getDistricts = (_, res) => {
+const getDistricts = (req, res) => {
   db.query("SELECT * FROM district", (err, result) => {
     if (err) return res.status(500).json({ error: err });
     res.json(result);

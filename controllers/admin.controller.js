@@ -17,7 +17,7 @@ const createAdmin = (req, res) => {
 };
 
 // Get All
-const getAdmins = (_, res) => {
+const getAdmins = (req, res) => {
   db.query("SELECT * FROM admin", (err, result) => {
     if (err) return res.status(500).json({ error: err });
     res.json(result);

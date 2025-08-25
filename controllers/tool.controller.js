@@ -14,7 +14,7 @@ const createTool = (req, res) => {
 };
 
 // Get All
-const getTools = (_, res) => {
+const getTools = (req, res) => {
   db.query("SELECT * FROM tool", (err, result) => {
     if (err) return res.status(500).json({ error: err });
     res.json(result);

@@ -17,7 +17,7 @@ const createShop = (req, res) => {
 };
 
 // Get All
-const getShops = (_, res) => {
+const getShops = (req, res) => {
   const sql = `SELECT s.*, u.name as owner_name, d.name as district_name
                FROM shop s
                LEFT JOIN user u ON s.owner_id = u.id

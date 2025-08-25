@@ -16,7 +16,7 @@ const createShopTool = (req, res) => {
 };
 
 // Get All
-const getShopTools = (_, res) => {
+const getShopTools = (req, res) => {
   const sql = `SELECT st.*, s.name as shop_name, t.name as tool_name
                FROM shop_tool st
                LEFT JOIN shop s ON st.shop_id = s.id
