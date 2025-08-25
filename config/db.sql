@@ -77,3 +77,35 @@ CREATE TABLE orders (
     FOREIGN KEY (client_id) REFERENCES user(id),
     FOREIGN KEY (shop_tool_id) REFERENCES shop_tool(id)
 );
+CREATE PROCEDURE getShopByDistrict(IN dname VARCHAR(50))
+BEGIN
+  SELECT 
+    d.name AS district_name,
+    s.name AS shop_name
+  FROM 
+    district d
+  LEFT JOIN 
+    shop s ON s.district_id = d.id
+  WHERE 
+    d.name LIKE CONCAT('%', dname, '%');
+END
+
+CALL `getShopByDistrict`('sergeli')
+
+CREATE PROCEDURE getShopByOwner(IN ownerName VARCHAR(50))
+BEGIN
+  SELECT 
+    u.name AS owner_name,
+    s.name AS shop_name,
+    d.name AS district_name
+  FROM 
+    user u
+  LEFT JOIN 
+    shop s ON s.owner_id = u.id
+  LEFT JOIN 
+    district d ON s.district_id = d.id
+  WHERE 
+    u.name LIKE CONCAT('%', ownerName, '%');
+END
+
+CALL getShopByOwner('Ali');
