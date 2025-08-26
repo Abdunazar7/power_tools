@@ -8,6 +8,7 @@ const districtRouter = require("./district.routes");
 const shopRouter = require("./shop.routes");
 const shopToolRouter = require("./shop_tool.routes");
 const ordersRouter = require("./orders.routes");
+const reportRouter = require("./report.routes");
 
 router.use("/otp", otpRouter);
 router.use("/users", userRouter);
@@ -17,6 +18,7 @@ router.use("/districts", districtRouter);
 router.use("/shops", shopRouter);
 router.use("/shop-tools", shopToolRouter);
 router.use("/orders", ordersRouter);
+router.use("/reports", reportRouter);
 
 module.exports = router;
 

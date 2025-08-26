@@ -11,10 +11,10 @@ const {
   deleteTool,
 } = require("../controllers/tool.controller");
 
-router.post("/", auth, role(["owner"]), validate(createToolSchema), createTool);
+router.post("/", auth, role(["owner", "admin"]), validate(createToolSchema), createTool);
 router.get("/", getTools);
 router.get("/:id", getTool);
-router.patch("/:id", auth, role(["owner"]), validate(updateToolSchema), updateTool);
-router.delete("/:id", auth, role(["owner"]), deleteTool);
+router.patch("/:id", auth, role(["owner", "admin"]), validate(updateToolSchema), updateTool);
+router.delete("/:id", auth, role(["owner", "admin"]), deleteTool);
 
 module.exports = router;

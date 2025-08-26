@@ -9,8 +9,10 @@ const {
   getAdmin,
   updateAdmin,
   deleteAdmin,
+  loginAdmin,
 } = require("../controllers/admin.controller");
 
+router.post("/login", loginAdmin);
 router.post("/", auth, role(["owner"]), validate(createAdminSchema), createAdmin);
 router.get("/", auth, getAdmins);
 router.get("/:id", auth, getAdmin);

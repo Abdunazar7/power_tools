@@ -11,10 +11,10 @@ const {
   deleteShopTool,
 } = require("../controllers/shop_tool.controller");
 
-router.post("/", auth, role(["owner"]), validate(createShopToolSchema), createShopTool);
+router.post("/", auth, role(["owner", "admin"]), validate(createShopToolSchema), createShopTool);
 router.get("/", getShopTools);
 router.get("/:id", getShopTool);
-router.patch("/:id", auth, role(["owner"]), validate(updateShopToolSchema), updateShopTool);
-router.delete("/:id", auth, role(["owner"]), deleteShopTool);
+router.patch("/:id", auth, role(["owner", "admin"]), validate(updateShopToolSchema), updateShopTool);
+router.delete("/:id", auth, role(["owner", "admin"]), deleteShopTool);
 
 module.exports = router;
