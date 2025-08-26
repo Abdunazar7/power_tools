@@ -13,11 +13,21 @@
 				{
 					"name": "register user",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwibmFtZSI6IkJla3pvZCIsInJvbGUiOiJvd25lciIsImlhdCI6MTc1NjE4MDE1NCwiZXhwIjoxNzU2MTgzNzU0fQ.5tfgjCua96cgBVP1op8SXEd2tscsziKy29kp04VvoR0",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"name\": \"Ali\",\n  \"phone_number\": \"+998901112233\",\n  \"email\": \"ali@example.com\",\n  \"password\": \"123456\",\n  \"is_active\": true,\n  \"role\": \"client\",\n  \"address\": \"Toshkent, Chilonzor\"\n}",
+							"raw": "{\n  \"name\": \"Hasan\",\n  \"phone_number\": \"998901112255\",\n  \"email\": \"hasan@example.com\",\n  \"password\": \"123456\",\n  \"is_active\": true,\n  \"role\": \"client\",\n  \"address\": \"Sergeli, Tashkent\"\n}\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -82,6 +92,16 @@
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwibmFtZSI6IkJla3pvZCIsInJvbGUiOiJvd25lciIsImlhdCI6MTc1NjE4MDE1NCwiZXhwIjoxNzU2MTgzNzU0fQ.5tfgjCua96cgBVP1op8SXEd2tscsziKy29kp04VvoR0",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"body": {
@@ -195,7 +215,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwibmFtZSI6IkJla3pvZCIsInJvbGUiOiJvd25lciIsImlhdCI6MTc1NjA2MTI0NywiZXhwIjoxNzU2MDY0ODQ3fQ.vexL5_QS49xPHsh594y_06fiZ-qEFguuZ8vYkFI5cI4",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwibmFtZSI6IkJla3pvZCIsInJvbGUiOiJvd25lciIsImlhdCI6MTc1NjE4MDE1NCwiZXhwIjoxNzU2MTgzNzU0fQ.5tfgjCua96cgBVP1op8SXEd2tscsziKy29kp04VvoR0",
 									"type": "string"
 								}
 							]
@@ -204,7 +224,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"full_name\": \"Admin Three\",\n  \"email\": \"admin2@example.com\",\n  \"password\": \"secret123\",\n  \"phone_number\": \"+998909999977\",\n  \"is_active\": true,\n  \"is_creator\": true\n}",
+							"raw": "{\n  \"full_name\": \"Admin Three\",\n  \"email\": \"admin3@example.com\",\n  \"password\": \"secret123\",\n  \"phone_number\": \"+998909999977\",\n  \"is_active\": true,\n  \"is_creator\": true\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -232,7 +252,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwibmFtZSI6IkJla3pvZCIsInJvbGUiOiJvd25lciIsImlhdCI6MTc1NjA2MTI0NywiZXhwIjoxNzU2MDY0ODQ3fQ.vexL5_QS49xPHsh594y_06fiZ-qEFguuZ8vYkFI5cI4",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwibmFtZSI6IkJla3pvZCIsInJvbGUiOiJvd25lciIsImlhdCI6MTc1NjE4MDE1NCwiZXhwIjoxNzU2MTgzNzU0fQ.5tfgjCua96cgBVP1op8SXEd2tscsziKy29kp04VvoR0",
 									"type": "string"
 								}
 							]
@@ -327,7 +347,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwibmFtZSI6IkJla3pvZCIsInJvbGUiOiJvd25lciIsImlhdCI6MTc1NjA2MTI0NywiZXhwIjoxNzU2MDY0ODQ3fQ.vexL5_QS49xPHsh594y_06fiZ-qEFguuZ8vYkFI5cI4",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwibmFtZSI6IkJla3pvZCIsInJvbGUiOiJvd25lciIsImlhdCI6MTc1NjE4MDE1NCwiZXhwIjoxNzU2MTgzNzU0fQ.5tfgjCua96cgBVP1op8SXEd2tscsziKy29kp04VvoR0",
 									"type": "string"
 								}
 							]
@@ -335,14 +355,52 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{baseURL}}/api/admins/3",
+							"raw": "{{baseURL}}/api/admins/2",
 							"host": [
 								"{{baseURL}}"
 							],
 							"path": [
 								"api",
 								"admins",
-								"3"
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"admin1@example.com\",\n  \"password\": \"secret123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/admins/login",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"admins",
+								"login"
 							]
 						}
 					},
@@ -361,7 +419,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwibmFtZSI6IkJla3pvZCIsInJvbGUiOiJvd25lciIsImlhdCI6MTc1NjA2MTI0NywiZXhwIjoxNzU2MDY0ODQ3fQ.vexL5_QS49xPHsh594y_06fiZ-qEFguuZ8vYkFI5cI4",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwibmFtZSI6IkJla3pvZCIsInJvbGUiOiJvd25lciIsImlhdCI6MTc1NjE4MDE1NCwiZXhwIjoxNzU2MTgzNzU0fQ.5tfgjCua96cgBVP1op8SXEd2tscsziKy29kp04VvoR0",
 									"type": "string"
 								}
 							]
@@ -370,7 +428,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"name\": \"Rotary Hammer\",\n  \"brand\": \"Bosch\",\n  \"description\": \"Construction Hammer\",\n  \"tool_price\": 80.00\n}",
+							"raw": "{\n  \"name\": \"Saw\",\n  \"brand\": \"Dewalt\",\n  \"description\": \"Circular saw\",\n  \"tool_price\": 250\n}\n\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -667,6 +725,16 @@
 				{
 					"name": "get shops",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwibmFtZSI6IkJla3pvZCIsInJvbGUiOiJvd25lciIsImlhdCI6MTc1NjE4MDE1NCwiZXhwIjoxNzU2MTgzNzU0fQ.5tfgjCua96cgBVP1op8SXEd2tscsziKy29kp04VvoR0",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -771,7 +839,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwibmFtZSI6IkJla3pvZCIsInJvbGUiOiJvd25lciIsImlhdCI6MTc1NjA2MTI0NywiZXhwIjoxNzU2MDY0ODQ3fQ.vexL5_QS49xPHsh594y_06fiZ-qEFguuZ8vYkFI5cI4",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZnVsbF9uYW1lIjoiQWRtaW4gT25lIiwiZW1haWwiOiJhZG1pbjFAZXhhbXBsZS5jb20iLCJyb2xlIjoiYWRtaW4iLCJpc19jcmVhdG9yIjoxLCJpYXQiOjE3NTYxODMwMTQsImV4cCI6MTc1NjE5MDIxNH0.S0nU5T-rdBg6EfJWCwd5YIGs1Qu6eGHSR87atctNAFg",
 									"type": "string"
 								}
 							]
@@ -780,7 +848,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"shop_id\": 2,\n  \"tool_id\": 2,\n  \"rent_price\": 20.00\n}",
+							"raw": "{\n  \"shop_id\": 1,\n  \"tool_id\": 3,\n  \"rent_price\": 50.00\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -803,6 +871,16 @@
 				{
 					"name": "get shop_tools",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwibmFtZSI6IkJla3pvZCIsInJvbGUiOiJvd25lciIsImlhdCI6MTc1NjE4MDE1NCwiZXhwIjoxNzU2MTgzNzU0fQ.5tfgjCua96cgBVP1op8SXEd2tscsziKy29kp04VvoR0",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -907,7 +985,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwibmFtZSI6IkJla3pvZCIsInJvbGUiOiJvd25lciIsImlhdCI6MTc1NjA2MTI0NywiZXhwIjoxNzU2MDY0ODQ3fQ.vexL5_QS49xPHsh594y_06fiZ-qEFguuZ8vYkFI5cI4",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwibmFtZSI6IkJla3pvZCIsInJvbGUiOiJvd25lciIsImlhdCI6MTc1NjE4MDE1NCwiZXhwIjoxNzU2MTgzNzU0fQ.5tfgjCua96cgBVP1op8SXEd2tscsziKy29kp04VvoR0",
 									"type": "string"
 								}
 							]
@@ -916,7 +994,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"client_id\": 2,\n  \"shop_tool_id\": 2,\n  \"order_date\": \"2025-08-24\",\n  \"period\": 5\n}",
+							"raw": "{\n  \"client_id\": 4,\n  \"shop_tool_id\": 5,\n  \"order_date\": \"2025-04-25\",\n  \"period\": 2\n}\n\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -944,7 +1022,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwibmFtZSI6IkJla3pvZCIsInJvbGUiOiJvd25lciIsImlhdCI6MTc1NjA2MTI0NywiZXhwIjoxNzU2MDY0ODQ3fQ.vexL5_QS49xPHsh594y_06fiZ-qEFguuZ8vYkFI5cI4",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwibmFtZSI6IkJla3pvZCIsInJvbGUiOiJvd25lciIsImlhdCI6MTc1NjE4MDE1NCwiZXhwIjoxNzU2MTgzNzU0fQ.5tfgjCua96cgBVP1op8SXEd2tscsziKy29kp04VvoR0",
 									"type": "string"
 								}
 							]
@@ -1036,6 +1114,34 @@
 			"name": "otp",
 			"item": [
 				{
+					"name": "verify otp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"abdunazaribrohimov7@gmail.com\",\r\n    \"otp\": \"513064\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/otp/verify-otp",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"otp",
+								"verify-otp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "send otp",
 					"request": {
 						"method": "POST",
@@ -1066,13 +1172,132 @@
 			]
 		},
 		{
-			"name": "verify otp",
+			"name": "reports",
+			"item": [
+				{
+					"name": "shops-by-tool",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwibmFtZSI6IkJla3pvZCIsInJvbGUiOiJvd25lciIsImlhdCI6MTc1NjE4MDE1NCwiZXhwIjoxNzU2MTgzNzU0fQ.5tfgjCua96cgBVP1op8SXEd2tscsziKy29kp04VvoR0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"toolName\": \"drill machine\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/reports/shops-by-tool",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"reports",
+								"shops-by-tool"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "clients-by-rentprice",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwibmFtZSI6IkJla3pvZCIsInJvbGUiOiJvd25lciIsImlhdCI6MTc1NjE4MDE1NCwiZXhwIjoxNzU2MTgzNzU0fQ.5tfgjCua96cgBVP1op8SXEd2tscsziKy29kp04VvoR0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"maxPrice\": 300\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/reports/clients-by-rentprice",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"reports",
+								"clients-by-rentprice"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "clients-by-district-date-tool",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"districtName\": \"Yakkasaroy\",\r\n  \"startDate\": \"2025-01-01\",\r\n  \"endDate\": \"2025-08-31\",\r\n  \"toolName\": \"Drill\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/reports/clients-by-district-date-tool",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"reports",
+								"clients-by-district-date-tool"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "shops-by-tool",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwibmFtZSI6IkJla3pvZCIsInJvbGUiOiJvd25lciIsImlhdCI6MTc1NjE4MDE1NCwiZXhwIjoxNzU2MTgzNzU0fQ.5tfgjCua96cgBVP1op8SXEd2tscsziKy29kp04VvoR0",
+							"type": "string"
+						}
+					]
+				},
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"email\": \"abdunazaribrohimov7@gmail.com\",\r\n    \"otp\": \"513064\"\r\n}",
+					"raw": "{\r\n  \"toolName\": \"drill machine\"\r\n}\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -1080,14 +1305,14 @@
 					}
 				},
 				"url": {
-					"raw": "{{baseURL}}/api/otp/verify-otp",
+					"raw": "{{baseURL}}/api/reports/shops-by-tool",
 					"host": [
 						"{{baseURL}}"
 					],
 					"path": [
 						"api",
-						"otp",
-						"verify-otp"
+						"reports",
+						"shops-by-tool"
 					]
 				}
 			},
