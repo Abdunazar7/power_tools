@@ -4,40 +4,18 @@ const db = require("../config/db.config");
 const createOrder = (req, res) => {
   const { client_id, shop_tool_id, order_date, period } = req.body;
 
-  const sqlPrice = `
-    SELECT st.rent_price, t.tool_price
-    FROM shop_tool st
-    LEFT JOIN tool t ON st.tool_id = t.id
-    LEFT JOIN shop s ON st.shop_id = s.id
-    WHERE st.id = ?
+  const sql = `
+    INSERT INTO orders (client_id, shop_tool_id, order_date, period)
+    VALUES (?, ?, ?, ?)
   `;
 
-  db.query(sqlPrice, [shop_tool_id], (err, result) => {
+  db.query(sql, [client_id, shop_tool_id, order_date, period], (err, result) => {
     if (err) return res.status(500).json({ error: err });
-    if (!result.length)
-      return res.status(404).json({ message: "ShopTool not found" });
 
-    const { rent_price, tool_price } = result[0];
-    const total_price = (Number(rent_price) + Number(tool_price)) * period;
-
-    const sql = `
-      INSERT INTO orders (client_id, shop_tool_id, order_date, period, total_price)
-      VALUES (?, ?, ?, ?, ?)
-    `;
-
-    db.query(
-      sql,
-      [client_id, shop_tool_id, order_date, period, total_price],
-      (err2, result2) => {
-        if (err2) return res.status(500).json({ error: err2 });
-
-        res.status(201).json({
-          id: result2.insertId,
-          message: "Order created",
-          total_price,
-        });
-      }
-    );
+    res.status(201).json({
+      id: result.insertId,
+      message: "Order created successfully",
+    });
   });
 };
 

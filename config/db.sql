@@ -172,3 +172,19 @@ BEGIN
 END;
 
 CALL `getClientsByDistrictDateTool`('yakkasaroy', '2025-01-01', '2025-08-31', 'Drill')
+
+CREATE TRIGGER calculate_total_price
+BEFORE INSERT ON orders
+FOR EACH ROW
+BEGIN
+    DECLARE rent DECIMAL(8,2);
+    DECLARE tool DECIMAL(8,2);
+
+    SELECT st.rent_price, t.tool_price
+    INTO rent, tool
+    FROM shop_tool st
+    LEFT JOIN tool t ON st.tool_id = t.id
+    WHERE st.id = NEW.shop_tool_id;
+
+    SET NEW.total_price = (rent + tool) * NEW.period;
+END
